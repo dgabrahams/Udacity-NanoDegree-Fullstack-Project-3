@@ -71,7 +71,12 @@ git clone https://github.com/dgabrahams/Udacity-NanoDegree-Fullstack-Project-3.g
 
 It should build into your current working folder, and produce an output similar to that found below:
 ```
-Database
+Cloning into 'Udacity-NanoDegree-Fullstack-Project-3'...
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 7 (delta 0), reused 7 (delta 0), pack-reused 0
+Unpacking objects: 100% (7/7), done.
 ```
 
 Note where this folder is for later use.
