@@ -7,7 +7,10 @@ DATABASE_NAME = "news"
 
 
 def runquery(query):
-    """Takes a query as parameter, runs against the database and returns the results"""
+    """
+        Takes a query as parameter, runs against the database
+        and returns the results
+    """
     db = psycopg2.connect(database=DATABASE_NAME)
     cursor = db.cursor()
     cursor.execute(query)
@@ -76,9 +79,12 @@ def question_two():
 
 def question_three():
     """Third question - holds query and controls output
-        A note about the query: originally the date format was: 'Month DD, YYYY'
+        A note about the query: originally the date format was:
+        'Month DD, YYYY'
         Changing to 'FMMonth' removes extra spaces.
-        More at this link: https://www.postgresql.org/docs/10/functions-formatting.html#FUNCTIONS-FORMATTING-DATETIMEMOD-TABLE
+        More at this link:
+        https://www.postgresql.org/docs/10/functions-formatting
+        .html#FUNCTIONS-FORMATTING-DATETIMEMOD-TABLE
     """
     query = """
         SELECT
