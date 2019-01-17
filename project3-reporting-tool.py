@@ -11,8 +11,9 @@ def runquery(query):
     db = psycopg2.connect(database=DATABASE_NAME)
     cursor = db.cursor()
     cursor.execute(query)
-    return cursor.fetchall()
+    results = cursor.fetchall()
     db.close()
+    return results
 
 
 # Main function of the program - to be run first
