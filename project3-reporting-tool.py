@@ -75,10 +75,14 @@ def question_two():
 
 
 def question_three():
-    """Third question - holds query and controls output"""
+    """Third question - holds query and controls output
+        A note about the query: originally the date format was: 'Month DD, YYYY'
+        Changing to 'FMMonth' removes extra spaces.
+        More at this link: https://www.postgresql.org/docs/10/functions-formatting.html#FUNCTIONS-FORMATTING-DATETIMEMOD-TABLE
+    """
     query = """
         SELECT
-            TO_CHAR(errors.date,'Month DD, YYYY') AS date,
+            TO_CHAR(errors.date,'FMMonth DD, YYYY') AS date,
             TO_CHAR(((errors.count::decimal
                     /requests.count::decimal)*100)
                     ,'9.99') AS percentage
