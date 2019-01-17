@@ -6,8 +6,8 @@ import psycopg2
 DATABASE_NAME = "news"
 
 
-# Takes a query as parameter, runs against the database and returns the results
 def runquery(query):
+    """Takes a query as parameter, runs against the database and returns the results"""
     db = psycopg2.connect(database=DATABASE_NAME)
     cursor = db.cursor()
     cursor.execute(query)
@@ -16,16 +16,16 @@ def runquery(query):
     return results
 
 
-# Main function of the program - to be run first
 def main():
+    """Main function of the program - to be run first"""
     print ""
     question_one()
     question_two()
     question_three()
 
 
-# First question - holds query and controls output
 def question_one():
+    """First question - holds query and controls output"""
     query = """
         SELECT DISTINCT
             articles.title,
@@ -48,8 +48,8 @@ def question_one():
     print ""
 
 
-# Second question - holds query and controls output
 def question_two():
+    """Second question - holds query and controls output"""
     query = """
         SELECT DISTINCT
             authors.name,
@@ -74,8 +74,8 @@ def question_two():
     print ""
 
 
-# Third question - holds query and controls output
 def question_three():
+    """Third question - holds query and controls output"""
     query = """
         SELECT
             TO_CHAR(errors.date,'Month DD, YYYY') AS date,
