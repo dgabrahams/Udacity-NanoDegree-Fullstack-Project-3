@@ -124,6 +124,24 @@ Run the script for this project:
 python project3-reporting-tool.py
 ```
 
+### Program Description
+---
+
+This script has been kept as light and simple as possible. Only a single library is imported and that is to manage database connections.
+
+Five functions have been implemented to perform its task, namely:
+* main()
+* runquery(query)
+* question_one()
+* question_two()
+* question_three()
+
+Each question function follows a similar format with a variable inside containgn the query to be run and a further variable to store results for output. Having the queris contained within the functions themselves clears the global scope and prevents possible conflicts in the future. It should also speed up the initialisation of the script as they will only be loaded at run time and on demand when required, saving memory and computing resources.
+
+The 'runquery(query)' function accepts a single argument which is the query itself and is called from the question functions. When run it connects to the database, runs the query and then returns the result. The database connection is closed before the function returns to aid a cleaner environment.
+
+This script was written using Python version 2.7, and has not been tested with Python 3.
+
 ### License
 ---
 
