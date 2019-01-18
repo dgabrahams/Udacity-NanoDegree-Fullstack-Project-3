@@ -136,11 +136,11 @@ Five functions have been implemented to perform the assigned task, namely:
 * question_two()
 * question_three()
 
-Each question function follows a similar format with a variable inside containgn the query to be run and a further variable to store results for output. Having the queris contained within the functions themselves clears the global scope and prevents possible conflicts in the future. It should also speed up the initialisation of the script as they will only be loaded at run time and on demand when required, saving memory and computing resources.
+Each question function follows a similar format with a variable inside containing the query to be run and a further variable to store results for output. Having the queries contained within the functions themselves clears the global scope and prevents possible conflicts in the future. It should also speed up the initialization of the script as they will only be loaded at run time and on demand when required, saving memory and computing resources.
 
 The 'runquery(query)' function accepts a single argument which is the query itself and is called from the question functions. When run it connects to the database, runs the query and then returns the result. The database connection is closed before the function returns to aid a cleaner environment.
 
-The 'main()' function controls the running of each respective question function and resultantly has control over the order of output. It is called at the very end of the script and is the only funciton required to do so, the quesiton functions being left to run on demand when required.
+The 'main()' function controls the running of each respective question function and resultantly has control over the order of output. It is called at the very end of the script and is the only function required to do so, the question functions being left to run on demand when required.
 
 This script was written using Python version 2.7, and has not been tested with Python 3.
 
